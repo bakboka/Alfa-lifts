@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- Customers -->
+  <record id="account_invoice_form_inherit" model="ir.ui.view">
+    <field name="name">account.invoice.form.erp_btl</field>
+    <field name="model">account.invoice</field>
+    <field name="inherit_id" ref="account.invoice_form"/>
+    <field name="arch" type="xml">
+
+      <xpath expr="//button[@name='preview_invoice']" position="after">
+        <button name="create_purchase_order" string="Create Purchase Order" class="oe_highlight" type="object"/>
+      </xpath>
+
+    </field>
+  </record>
+
+</odoo>
