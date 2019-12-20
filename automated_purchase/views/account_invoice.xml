@@ -9,9 +9,11 @@
     <field name="arch" type="xml">
 
       <xpath expr="//button[@name='preview_invoice']" position="after">
-        <button name="create_purchase_order" string="Create Purchase Order" class="oe_highlight" type="object"/>
+        <button name="create_purchase_order" string="Create Purchase Order" class="oe_highlight" type="object" attrs="{'invisible': [('purchase_id', '!=', False)]}"/>
       </xpath>
-
+      <xpath expr="//field[@name='team_id']" position="after">
+        <field name="purchase_id" string="Purchase Order" class="oe_highlight" type="object"/>
+      </xpath>
     </field>
   </record>
 

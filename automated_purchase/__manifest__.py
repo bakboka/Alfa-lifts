@@ -23,7 +23,8 @@
     ],
 
     'data': [
-        'views/account_invoice.xml'
+        'views/account_invoice.xml',
+        'views/purchase_order.xml'
     ],
     'qweb': [
 
